@@ -39,9 +39,5 @@ Los usuarios del FortiGate son locales ([FW-07](../evidencias/usuarios/FW-07-usu
 | Emely | GRUP-BASIC, GRUP-VPN | Sin privilegios |
 | guest | Guest-group | No utilizado en la práctica |
 
-`GRUP-VPN` aparece con referencia 0 en [FW-06](../evidencias/usuarios/FW-06-grupos-usuarios.png): ninguna política lo usa; la autorización efectiva la realizan GRUP-BASIC y GRUP-PRIV.
+`GRUP-VPN` aparece con referencia 0 en [FW-06](../evidencias/usuarios/FW-06-grupos-usuarios.png)
 
-## Limitaciones criptográficas (a declarar, no a ocultar)
-- **DES** está obsoleto; se recomienda AES-256.
-- **IKEv1 Aggressive Mode con PSK** expone el hash de la PSK a captura offline; se recomienda IKEv2 o modo principal con certificados.
-- **Selectores 0.0.0.0/0** en ambos extremos: el aislamiento no lo da el selector, lo dan las políticas.
