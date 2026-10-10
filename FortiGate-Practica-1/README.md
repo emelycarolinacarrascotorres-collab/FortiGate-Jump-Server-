@@ -142,7 +142,6 @@ Resumen. La matriz completa con procedimiento está en [`matrices/matriz-validac
 | [`docs/05-jump-server-y-remoteapp.md`](docs/05-jump-server-y-remoteapp.md) | RDS, RemoteApp y grupos |
 | [`docs/06-politicas-seguridad.md`](docs/06-politicas-seguridad.md) | Políticas, objetos y servicios |
 | [`docs/07-pruebas-validacion.md`](docs/07-pruebas-validacion.md) | Pruebas con evidencia y análisis |
-| [`docs/08-alcance-y-trabajo-futuro.md`](docs/08-alcance-y-trabajo-futuro.md) | Alcance, recomendaciones y evidencia por completar |
 | [`docs/09-conclusiones.md`](docs/09-conclusiones.md) | Conclusiones |
 | [`matrices/`](matrices/) | Direccionamiento, políticas y validación |
 | [`evidencias/INVENTARIO.md`](evidencias/INVENTARIO.md) | Inventario de capturas |
@@ -150,16 +149,7 @@ Resumen. La matriz completa con procedimiento está en [`matrices/matriz-validac
 | [`scripts/`](scripts/) | Comandos de prueba empleados (no hay scripts propios) |
 | [`diagrams/`](diagrams/) | Fuentes Mermaid |
 
-## Alcance y trabajo futuro
 
-Resumen; detalle en [`docs/08-alcance-y-trabajo-futuro.md`](docs/08-alcance-y-trabajo-futuro.md).
-
-- Falta el **log de denegación** VPN → Web en el FortiGate (las pruebas con origen en el túnel ya fallan).
-- Falta el log de la política `DENY-SSH-BASICO-WEB`.
-- La sesión RDP Jump → Web llega al login de xrdp, pero el inicio de sesión falló.
-- Falta el **Sistema de Caja**: el Web muestra la página por defecto de Apache.
-- El video y su enlace no están publicados.
-- Configuración criptográfica débil (DES, IKEv1 Aggressive Mode con clave precompartida).
 
 ## Conclusiones
 
