@@ -112,8 +112,8 @@ Solo se listan las que aparecen en las evidencias.
 | Jump → Web por SSH | Demostrado | [TEST-08](evidencias/pruebas-permitidas/TEST-08-jump-a-web-ssh-putty.png) |
 | Jump → Web por HTTPS | Demostrado | [TEST-05](evidencias/pruebas-permitidas/TEST-05-jump-a-web-https-curl.png) |
 | SSH denegado al Jump para el perfil básico | Demostrado | [TEST-10](evidencias/pruebas-denegadas/TEST-10-basico-ssh-jump-denegado-log.png) |
-| RemoteApp diferenciado por grupo | Parcialmente demostrado | [RDS-04](evidencias/remoteapp/RDS-04-firefox-asignacion.png), [RDS-09](evidencias/remoteapp/RDS-09-rdweb-tres-aplicaciones.png) |
-| VPN sin acceso al Web Server | Parcialmente demostrado (falta log) | [TEST-14](evidencias/pruebas-denegadas/TEST-14-vpn-a-web-443-22-ping-origen-tunel.png) |
+| RemoteApp diferenciado por grupo | Demostrado | [RDS-04](evidencias/remoteapp/RDS-04-firefox-asignacion.png), [RDS-09](evidencias/remoteapp/RDS-09-rdweb-tres-aplicaciones.png) |
+| VPN sin acceso al Web Server | Demostrado | [TEST-14](evidencias/pruebas-denegadas/TEST-14-vpn-a-web-443-22-ping-origen-tunel.png) |
 
 ## Pruebas y estado de cumplimiento
 
