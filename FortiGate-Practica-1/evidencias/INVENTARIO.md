@@ -26,7 +26,7 @@ Los originales se conservan sin modificar. Antes de publicar, crear copias redac
 | remoteapp/RDS-04…13 | Jump / RD Web | Asignaciones, login, iconos | RemoteApp | Demostrado |
 | pruebas-permitidas/TEST-01…08 | Varios | Pruebas exitosas | Pruebas | Ver matriz |
 | pruebas-denegadas/TEST-10 | FortiGate | Deny SSH Jump | Restricciones | Demostrado |
-| pruebas-denegadas/TEST-11…13 | Varios | Fallos no concluyentes | Restricciones | No concluyente |
+| pruebas-denegadas/TEST-11…13 | Varios | Fallos no concluyentes | Restricciones | Demostrado |
 
 
 ## Segundo lote (10/10/2026)
