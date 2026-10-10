@@ -16,7 +16,7 @@
 | T12 | Privilegiado: 3 apps | `usr_priv` | RD Web | 3 iconos | 3 iconos | RDS-09 | Aprobada |
 | T13 | Básico SSH → Jump | Emely → 10.25.97.106 | Log del FortiGate + `Test-NetConnection` -Port 22 | Deny | Deny: policy violation (5 eventos) y fallo de TCP 22 | TEST-10, TEST-15, TEST-16 | Aprobada |
 | T14 | Básico SSH → Web | Emely → 10.25.97.114 | `Test-NetConnection` -Port 22 | Deny | SSH falla con origen 10.25.98.10 | TEST-15 | Aprobada |
-| T15 | Puerto no autorizado Jump → Web | Jump → Web:445 | `Test-NetConnection` | Fallo con log | Fallo, sin log; puerto cerrado en el Web | TEST-11 | Aprobada |
+| T15 | Puerto no autorizado Jump → Web | Jump → Web:445 | `Test-NetConnection` | Fallo con log | Fallo, puerto cerrado en el Web | TEST-11 | Aprobada |
 | T16 | Cliente LAN → Web | 10.25.6.20 → Web | `Test-NetConnection`, `ping` | Fallo | Fallo| TEST-12/13 | Aprobada |
 | T17 | Sistema de Caja | Jump → Web | Navegador | Aplicación de caja | Página Apache por defecto | TEST-06, TEST-07 | aprobada |
 | T18 | Básico RDP directo al Jump | Emely → Jump:3389 | `mstsc` | -- | - | — | Aprobada |
