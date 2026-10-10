@@ -14,18 +14,7 @@ Laboratorio de segmentación de red y acceso remoto controlado: un FortiGate pro
 ---
 
 ## Video demostrativo
-
-> **Enlace pendiente.** El video aún no ha sido publicado y no se incluye un enlace inventado.
-> Cuando esté disponible, reemplazar esta línea por el enlace real y completar la tabla de minutaje.
-> Instrucciones en [`video/README.md`](video/README.md).
-
-| Minuto | Prueba mostrada |
-|---|---|
-| `[pendiente]` | Conexión de la VPN con FortiClient |
-| `[pendiente]` | Acceso a RD Web con usuario sin privilegios (solo Firefox) |
-| `[pendiente]` | Acceso a RD Web con usuario con privilegios (Firefox, PuTTY, RDP) |
-| `[pendiente]` | Jump → Web por HTTPS, SSH y RDP |
-| `[pendiente]` | Denegaciones y logs del FortiGate |
+(https://youtu.be/J9bZsajPz9w)
 
 ---
 
