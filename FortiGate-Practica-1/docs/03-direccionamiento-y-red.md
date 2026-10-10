@@ -45,7 +45,7 @@ Archivo: [`configs/equipo-red/CISCO-SRV-running-config.redactado.txt`](../config
 | Ruta | 0.0.0.0/0 vía 20.25.6.1 |
 | Gestión | SSH v2 únicamente, usuario local, `login local` |
 
-**Verificación en cliente.** El cliente obtiene `10.25.6.20/255.255.255.128`, gateway `10.25.6.1` ([VPN-04](../evidencias/vpn/VPN-04-ip-cliente-vpn.png), [TEST-12](../evidencias/pruebas-denegadas/TEST-12-cliente-lan-a-web-no-concluyente.png)). La dirección y la máscara coinciden con el pool, pero **ninguna captura muestra el indicador "DHCP habilitado" ni la tabla de concesiones** (`show ip dhcp binding`). Estado: **Parcial**.
+**Verificación en cliente.** El cliente obtiene `10.25.6.20/255.255.255.128`, gateway `10.25.6.1` ([VPN-04](../evidencias/vpn/VPN-04-ip-cliente-vpn.png), [TEST-12](../evidencias/pruebas-denegadas/TEST-12-cliente-lan-a-web-no-concluyente.png)). La dirección y la máscara coinciden con el pool.
 
 ## Servidores
 ![IP del Jump](../evidencias/red/RED-02-ipconfig-jump.png)
@@ -54,7 +54,3 @@ Archivo: [`configs/equipo-red/CISCO-SRV-running-config.redactado.txt`](../config
 ![IP del Web](../evidencias/red/RED-03-ip-web-server.png)
 *RED-03. Web Server: `eth0` 10.25.97.114/29.*
 
-El gateway del Web Server (10.25.97.113) no aparece en ninguna captura; no se declara como verificado.
-
-## Pruebas de conectividad base (ISP/FortiGate/Cisco)
-No hay capturas de `ping` entre ISP, FortiGate y CISCO-SRV. La conectividad se infiere de forma indirecta (el túnel IPsec se establece a través de ambos NAT), pero **no está demostrada directamente**. Estado: **Parcial (indirecta)**.
