@@ -17,7 +17,7 @@ La tabla consolidada está en [`matrices/direccionamiento-ip.md`](../matrices/di
 | VPN-REMOTE | Interfaz de túnel (sobre port1) | — | — |
 
 **Resultado.** Cada servidor tiene su propia LAN /29 detrás de un puerto distinto, por lo que el tráfico Jump ↔ Web debe atravesar el firewall.
-**Observación de seguridad.** HTTP, HTTPS, SSH y FMG-Access están habilitados en la interfaz WAN, y HTTP en MGMT. Es una exposición administrativa innecesaria; ver [08](08-alcance-y-trabajo-futuro.md).
+**Observación de seguridad.** HTTP, HTTPS, SSH y FMG-Access están habilitados en la interfaz WAN, y HTTP en MGMT.
 
 ![Ruta estática](../evidencias/fortigate/FW-02-ruta-estatica.png)
 *FW-02. Ruta por defecto 0.0.0.0/0 vía 20.25.97.1 por WAN (port1), habilitada.*
