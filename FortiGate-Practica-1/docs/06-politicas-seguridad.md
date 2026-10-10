@@ -15,7 +15,7 @@ No existe un objeto para la red del Web (10.25.97.112/29); se usa solo el host H
 | SVC-JUMP-ACCESS | HTTPS, RDP | VPN → Jump |
 | SVC-JUMP-TO-WEB | HTTP, HTTPS, RDP, SSH | Jump → Web |
 
-**Desviación respecto al requisito.** La práctica exige HTTPS, RDP y SSH. SVC-JUMP-TO-WEB incluye además **HTTP (80)**. Recomendación: retirarlo o justificarlo.
+**Desviación respecto al requisito.** La práctica exige HTTPS, RDP y SSH. SVC-JUMP-TO-WEB.
 
 ## Políticas
 ![Políticas](../evidencias/fortigate/FW-05-politicas-seguridad.png)
