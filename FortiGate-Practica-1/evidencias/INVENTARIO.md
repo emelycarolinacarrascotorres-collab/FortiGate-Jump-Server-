@@ -28,11 +28,6 @@ Los originales se conservan sin modificar. Antes de publicar, crear copias redac
 | pruebas-denegadas/TEST-10 | FortiGate | Deny SSH Jump | Restricciones | Demostrado |
 | pruebas-denegadas/TEST-11…13 | Varios | Fallos no concluyentes | Restricciones | No concluyente |
 
-## Duplicados y exclusiones
-- Capturas de pantalla duplicadas (misma imagen con nombre descriptivo y nombre de fecha): 8 pares; se conserva la versión descriptiva.
-- `…214949.png` es un recorte de `…215014.png` (RED-06); se conserva una.
-- `…184349.png` y `…212156.png` son la misma pantalla de inicio de sesión (RDS-08); se conserva una.
-- `…200209.png` (pregunta de examen sobre GPS): **no pertenece a la práctica; excluida**.
 
 ## Segundo lote (10/10/2026)
 | Archivo | Contenido | Estado |
