@@ -19,8 +19,6 @@ Documentar una infraestructura de seguridad de red ya implementada en GNS3, basa
 | Usuario sin privilegios: solo aplicación web y SSH denegado | [05](05-jump-server-y-remoteapp.md), [07](07-pruebas-validacion.md) |
 | Evidencias, diagramas, configs y video | README, [`evidencias/`](../evidencias/INVENTARIO.md) |
 
-## Principio de documentación
-Cada afirmación se apoya en una captura o archivo. Lo que no tiene evidencia se marca **Pendiente**. Los estados usados son: *Aprobada*, *Parcial*, *Ejecutada, no concluyente* y *Pendiente*.
 
 ## Los tres controles que se evalúan por separado
 1. **Publicación RemoteApp**: qué iconos ve cada usuario.
