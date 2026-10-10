@@ -32,10 +32,3 @@ No existe un objeto para la red del Web (10.25.97.112/29); se usa solo el host H
 
 Las políticas ACCEPT tienen NAT deshabilitado y perfil `no-inspection`. Los números de la primera columna son el orden visual; los ID reales que muestra el log son `DENY-SSH-BASICO-JUMP (1)`, `BASICO-to-JUMP (3)` y `JUMP-to-WEB (5)`.
 
-## Análisis técnico
-
-1. **El aislamiento del Web depende de la ausencia de política y del Implicit Deny.** No hay una política `VPN → Web` que permita tráfico, por lo que, con origen en el túnel, el Web debe ser inalcanzable. Falta la prueba (T05).
-2. **Los dos perfiles reciben el mismo acceso de red al Jump** (HTTPS y RDP). La diferencia de privilegios es de RemoteApp. Un usuario básico con acceso TCP a 3389 podría intentar una sesión RDP directa; qué ocurre depende de los derechos de inicio de sesión en el Jump. No hay prueba de ello (T18).
-3. **SSH de Emely**: el bloqueo hacia el Jump está evidenciado ([TEST-10](../evidencias/pruebas-denegadas/TEST-10-basico-ssh-jump-denegado-log.png)); el de hacia el Web no (0 B).
-4. **El Implicit Deny no registra** (Log deshabilitado); las denegaciones por política implícita no dejan rastro. Se recomienda activar el registro desde la GUI.
-5. **Política de privilegiados.** PRIV-to-JUMP no tiene una política equivalente de DENY SSH, pero tampoco permite SSH: el servicio SVC-JUMP-ACCESS solo incluye HTTPS y RDP. Que el perfil con privilegios use PuTTY se hace **desde el Jump** hacia el Web (JUMP-to-WEB).
