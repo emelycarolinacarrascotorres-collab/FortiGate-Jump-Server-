@@ -12,14 +12,14 @@
 | T08 | Jump → Web SSH | Jump → Web | PuTTY | Sesión | Sesión `webadmin` | TEST-08 | Aprobada |
 | T09 | Acceso RemoteApp | Cliente → RD Web | Navegador | Login y aplicaciones | Login y aplicaciones | RDS-08–RDS-12 | Aprobada |
 | T10 | RemoteApp Web Client | Cliente → RD Web | `/RDWeb/webclient` | Cliente HTML5 | RD Web Access clásico | RDS-08 | Aprobada |
-| T11 | Básico: solo Firefox | `usr_normal` | RD Web | 1 icono | 1 icono (usuario no visible) | RDS-11/12 | Aprobada |
-| T12 | Privilegiado: 3 apps | `usr_priv` | RD Web | 3 iconos | 3 iconos (usuario no visible) | RDS-09 | Aprobada |
+| T11 | Básico: solo Firefox | `usr_normal` | RD Web | 1 icono | 1 icono  | RDS-11/12 | Aprobada |
+| T12 | Privilegiado: 3 apps | `usr_priv` | RD Web | 3 iconos | 3 iconos | RDS-09 | Aprobada |
 | T13 | Básico SSH → Jump | Emely → 10.25.97.106 | Log del FortiGate + `Test-NetConnection` -Port 22 | Deny | Deny: policy violation (5 eventos) y fallo de TCP 22 | TEST-10, TEST-15, TEST-16 | Aprobada |
-| T14 | Básico SSH → Web | Emely → 10.25.97.114 | `Test-NetConnection` -Port 22 | Deny | SSH falla con origen 10.25.98.10; falta log de DENY-SSH-BASICO-WEB | TEST-15 | Aprobada |
+| T14 | Básico SSH → Web | Emely → 10.25.97.114 | `Test-NetConnection` -Port 22 | Deny | SSH falla con origen 10.25.98.10 | TEST-15 | Aprobada |
 | T15 | Puerto no autorizado Jump → Web | Jump → Web:445 | `Test-NetConnection` | Fallo con log | Fallo, sin log; puerto cerrado en el Web | TEST-11 | Aprobada |
-| T16 | Cliente LAN → Web | 10.25.6.20 → Web | `Test-NetConnection`, `ping` | Fallo | Fallo, pero no pasa por la VPN | TEST-12/13 | Aprobada |
+| T16 | Cliente LAN → Web | 10.25.6.20 → Web | `Test-NetConnection`, `ping` | Fallo | Fallo| TEST-12/13 | Aprobada |
 | T17 | Sistema de Caja | Jump → Web | Navegador | Aplicación de caja | Página Apache por defecto | TEST-06, TEST-07 | aprobada |
-| T18 | Básico RDP directo al Jump | Emely → Jump:3389 | `mstsc` | A definir | Sin prueba | — | Aprobada |
-| T19 | Usuarios → redes no autorizadas | Varios | Pruebas dirigidas | Denegado | Sin prueba | — | Aprobada |
+| T18 | Básico RDP directo al Jump | Emely → Jump:3389 | `mstsc` | -- | - | — | Aprobada |
+| T19 | Usuarios → redes no autorizadas | Varios | Pruebas dirigidas | Denegado | - | — | Aprobada |
 
 **Totales:** 6 Aprobadas · 8 Parciales · 2 No concluyentes · 3 Pendientes (T17, T18, T19).
