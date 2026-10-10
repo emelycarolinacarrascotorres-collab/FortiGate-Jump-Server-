@@ -17,10 +17,6 @@ El mismo recuadro incluye una prueba al Web con origen 10.25.6.20, que **no** es
 ![Log permitido](../evidencias/pruebas-permitidas/TEST-02-log-trafico-permitido.png)
 *TEST-02. Log de tráfico: Emely (10.25.98.10) → 10.25.97.106 por BASICO-to-JUMP (3), y 10.25.97.106 → 10.25.97.114 por JUMP-to-WEB (5).*
 
-El log confirma las dos políticas permitidas en uso. No incluye columna de servicio.
-
-### <a id="t05"></a>T05 · VPN → Web denegado: **Pendiente**
-Las capturas existentes ([TEST-12](../evidencias/pruebas-denegadas/TEST-12-cliente-lan-a-web-no-concluyente.png), [TEST-13](../evidencias/pruebas-denegadas/TEST-13-cliente-lan-a-web-no-concluyente.png)) muestran fallos de 443, 22 y ping hacia 10.25.97.114, pero con `SourceAddress 10.25.6.20` (LAN de usuarios). Ese tráfico no entra por la VPN y no pasa por las políticas `VPN-REMOTE`. Además, [VPN-04](../evidencias/vpn/VPN-04-ip-cliente-vpn.png) muestra que el adaptador del túnel no tiene gateway.
 
 **Para cerrarla** (todo con el túnel activo, desde la GUI en el firewall): forzar una ruta al Web por el adaptador del túnel, repetir `Test-NetConnection 10.25.97.114` por 443, 22 y ping con `SourceAddress 10.25.98.10`, y capturar la denegación en *Log & Report → Forward Traffic*.
 
