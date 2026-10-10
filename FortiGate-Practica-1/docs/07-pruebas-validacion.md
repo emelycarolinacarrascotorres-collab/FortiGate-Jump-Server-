@@ -17,9 +17,6 @@ El mismo recuadro incluye una prueba al Web con origen 10.25.6.20, que **no** es
 ![Log permitido](../evidencias/pruebas-permitidas/TEST-02-log-trafico-permitido.png)
 *TEST-02. Log de tráfico: Emely (10.25.98.10) → 10.25.97.106 por BASICO-to-JUMP (3), y 10.25.97.106 → 10.25.97.114 por JUMP-to-WEB (5).*
 
-
-**Para cerrarla** (todo con el túnel activo, desde la GUI en el firewall): forzar una ruta al Web por el adaptador del túnel, repetir `Test-NetConnection 10.25.97.114` por 443, 22 y ping con `SourceAddress 10.25.98.10`, y capturar la denegación en *Log & Report → Forward Traffic*.
-
 ## Jump → Web
 
 ### T06 · HTTPS: Aprobada
