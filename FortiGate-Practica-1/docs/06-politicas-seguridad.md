@@ -29,5 +29,4 @@ No existe un objeto para la red del Web (10.25.97.112/29); se usa solo el host H
 | 5 | JUMP-to-WEB | port4 → port2 | H-JUMP | H-WEB | SVC-JUMP-TO-WEB | ACCEPT | 42.76 kB |
 | — | Implicit Deny | any → any | all | all | ALL | DENY | 20.72 kB |
 
-Las políticas ACCEPT tienen NAT deshabilitado y perfil `no-inspection`. Los números de la primera columna son el orden visual; los ID reales que muestra el log son `DENY-SSH-BASICO-JUMP (1)`, `BASICO-to-JUMP (3)` y `JUMP-to-WEB (5)`.
 
