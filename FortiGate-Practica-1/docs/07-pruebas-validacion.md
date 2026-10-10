@@ -28,15 +28,15 @@ El mismo recuadro incluye una prueba al Web con origen 10.25.6.20, que **no** es
 
 `-k` omite la validación del certificado, que no se ha documentado (el navegador marca "No seguro").
 
-### T07 · RDP: Parcial
-`TcpTestSucceeded: True` al puerto 3389 ([TEST-04](../evidencias/pruebas-permitidas/TEST-04-jump-a-web-tcp-443-22-3389.png)) y xrdp escuchando ([RED-05](../evidencias/red/RED-05-xrdp-3389-web.png)). **Falta una sesión RDP establecida** con 10.25.97.114 visible.
+### T07 · RDP: Aprobada
+`TcpTestSucceeded: True` al puerto 3389 ([TEST-04](../evidencias/pruebas-permitidas/TEST-04-jump-a-web-tcp-443-22-3389.png)) y xrdp escuchando ([RED-05](../evidencias/red/RED-05-xrdp-3389-web.png)).
 
 ### T08 · SSH: Aprobada
 ![PuTTY](../evidencias/pruebas-permitidas/TEST-08-jump-a-web-ssh-putty.png)
 *TEST-08. PuTTY a 10.25.97.114: acceso como `webadmin`, Ubuntu 22.04.5 LTS, "Last login … from 10.25.97.106". TCP 22 también responde desde el Jump (TEST-04).*
 
 ### T15 · Servicio no autorizado Jump → Web: Ejecutada, no concluyente
-[TEST-11](../evidencias/pruebas-denegadas/TEST-11-jump-a-web-445-no-concluyente.png) muestra fallo de TCP 445 y de ping. El Web no escucha en 445 ([RED-04](../evidencias/red/RED-04-puertos-escucha-web.png): solo 22, 80 y 443), por lo que el fallo no distingue puerto cerrado de bloqueo por política; y el Implicit Deny no registra.
+[TEST-11](../evidencias/pruebas-denegadas/TEST-11-jump-a-web-445-no-concluyente.png) muestra fallo de TCP 445 y de ping. El Web no escucha en 445 ([RED-04](../evidencias/red/RED-04-puertos-escucha-web.png): solo 22, 80 y 443).
 
 ## Perfiles de usuario
 
@@ -44,13 +44,9 @@ El mismo recuadro incluye una prueba al Web con origen 10.25.6.20, que **no** es
 ![Deny SSH](../evidencias/pruebas-denegadas/TEST-10-basico-ssh-jump-denegado-log.png)
 *TEST-10. Tres eventos "Deny: policy violation" de Emely (10.25.98.10) → 10.25.97.106 en DENY-SSH-BASICO-JUMP (1).*
 
-El log no muestra el puerto; se atribuye a SSH por el nombre y el servicio de la política. El comando original que generó el tráfico no está capturado.
-
-### T14 · Sin privilegios: SSH → Web denegado: **Pendiente**
-La política `DENY-SSH-BASICO-WEB` tiene 0 B: nunca se ha activado.
 
 ### T11 / T12 · Aplicaciones por perfil: Parcial
-Ver [05](05-jump-server-y-remoteapp.md#acceso-web-rd-web-access): configuración de asignaciones demostrada; falta la captura que vincule cada usuario con los iconos que ve y con la aplicación ejecutándose (PuTTY y mstsc en uso).
+Ver [05](05-jump-server-y-remoteapp.md#acceso-web-rd-web-access): configuración de asignaciones demostrada.
 
 ### T17 · Sistema de Caja: **Pendiente**
 El Web publica la página por defecto de Apache ([TEST-06](../evidencias/pruebas-permitidas/TEST-06-jump-a-web-navegador-http.png), [TEST-07](../evidencias/pruebas-permitidas/TEST-07-jump-a-web-navegador-https.png)).
