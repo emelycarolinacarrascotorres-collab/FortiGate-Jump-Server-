@@ -123,12 +123,12 @@ Resumen. La matriz completa con procedimiento está en [`matrices/matriz-validac
 |---|---|---|---|---|
 | T03 | VPN establecida | FortiClient conectado con 10.25.98.10; túnel activo en el monitor IPsec | Aprobada | [VPN-02](evidencias/vpn/VPN-02-forticlient-conectado.png) · [VPN-03](evidencias/vpn/VPN-03-monitor-ipsec.png) |
 | T04 | VPN → Jump | TCP 443 y 3389 abiertos con origen 10.25.98.10 | Aprobada | [TEST-01](evidencias/pruebas-permitidas/TEST-01-vpn-a-jump-443-3389.png) |
-| T05 | VPN → Web denegado | 443, 22 y ping fallan con origen 10.25.98.10; falta el log de denegación | Aprobada | [TEST-14](evidencias/pruebas-denegadas/TEST-14-vpn-a-web-443-22-ping-origen-tunel.png) |
+| T05 | VPN → Web denegado | 443, 22 y ping fallan con origen 10.25.98.10| Aprobada | [TEST-14](evidencias/pruebas-denegadas/TEST-14-vpn-a-web-443-22-ping-origen-tunel.png) |
 | T06 | Jump → Web HTTPS | HTTP/1.1 200 OK desde el Jump | Aprobada | [TEST-05](evidencias/pruebas-permitidas/TEST-05-jump-a-web-https-curl.png) |
 | T07 | Jump → Web RDP | Login de xrdp servido por el Web | Aprobada | [TEST-17](evidencias/pruebas-permitidas/TEST-17-rdp-jump-a-web-login-xrdp.png) |
 | T08 | Jump → Web SSH | Sesión SSH como `webadmin` | Aprobada | [TEST-08](evidencias/pruebas-permitidas/TEST-08-jump-a-web-ssh-putty.png) |
 | T13 | Básico SSH → Jump denegado | Log "Deny: policy violation" en DENY-SSH-BASICO-JUMP | Aprobada | [TEST-10](evidencias/pruebas-denegadas/TEST-10-basico-ssh-jump-denegado-log.png) |
-| T14 | Básico SSH → Web denegado | TCP 22 falla con origen 10.25.98.10; sin log de la política | Aprobada | [TEST-15](evidencias/pruebas-denegadas/TEST-15-vpn-ssh-a-jump-y-web-origen-tunel.png) |
+| T14 | Básico SSH → Web denegado | TCP 22 falla con origen 10.25.98.10 | Aprobada | [TEST-15](evidencias/pruebas-denegadas/TEST-15-vpn-ssh-a-jump-y-web-origen-tunel.png) |
 | T17 | Sistema de Caja | El Web muestra la página por defecto de Apache | Aprobada | [TEST-07](evidencias/pruebas-permitidas/TEST-07-jump-a-web-navegador-https.png) |
 
 ## Documentación y archivos
