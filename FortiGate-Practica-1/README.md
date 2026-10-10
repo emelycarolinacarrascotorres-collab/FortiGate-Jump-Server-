@@ -9,7 +9,7 @@
 
 Laboratorio de segmentación de red y acceso remoto controlado: un FortiGate protege dos servidores (Jump Server y Web Server), una VPN IPsec de acceso remoto permite llegar **únicamente** al Jump Server, y el Jump publica aplicaciones mediante RemoteApp de forma diferenciada según el perfil del usuario.
 
-**Autor:** `[completar: nombre y matrícula]` · **Asignatura:** `[completar]` · **Fecha de las evidencias:** 09/10/2026
+**Autor:** `Emely Carrasco` · **Asignatura:** `SA` · **Fecha de las evidencias:** 09/10/2026
 
 ---
 
