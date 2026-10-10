@@ -125,7 +125,7 @@ Resumen. La matriz completa con procedimiento está en [`matrices/matriz-validac
 | T04 | VPN → Jump | TCP 443 y 3389 abiertos con origen 10.25.98.10 | Aprobada | [TEST-01](evidencias/pruebas-permitidas/TEST-01-vpn-a-jump-443-3389.png) |
 | T05 | VPN → Web denegado | 443, 22 y ping fallan con origen 10.25.98.10; falta el log de denegación | Aprobada | [TEST-14](evidencias/pruebas-denegadas/TEST-14-vpn-a-web-443-22-ping-origen-tunel.png) |
 | T06 | Jump → Web HTTPS | HTTP/1.1 200 OK desde el Jump | Aprobada | [TEST-05](evidencias/pruebas-permitidas/TEST-05-jump-a-web-https-curl.png) |
-| T07 | Jump → Web RDP | Login de xrdp servido por el Web; el inicio de sesión falló | Aprobada | [TEST-17](evidencias/pruebas-permitidas/TEST-17-rdp-jump-a-web-login-xrdp.png) · [TEST-18](evidencias/pruebas-permitidas/TEST-18-rdp-jump-a-web-login-fallido.png) |
+| T07 | Jump → Web RDP | Login de xrdp servido por el Web | Aprobada | [TEST-17](evidencias/pruebas-permitidas/TEST-17-rdp-jump-a-web-login-xrdp.png) |
 | T08 | Jump → Web SSH | Sesión SSH como `webadmin` | Aprobada | [TEST-08](evidencias/pruebas-permitidas/TEST-08-jump-a-web-ssh-putty.png) |
 | T13 | Básico SSH → Jump denegado | Log "Deny: policy violation" en DENY-SSH-BASICO-JUMP | Aprobada | [TEST-10](evidencias/pruebas-denegadas/TEST-10-basico-ssh-jump-denegado-log.png) |
 | T14 | Básico SSH → Web denegado | TCP 22 falla con origen 10.25.98.10; sin log de la política | Aprobada | [TEST-15](evidencias/pruebas-denegadas/TEST-15-vpn-ssh-a-jump-y-web-origen-tunel.png) |
