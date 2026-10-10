@@ -11,8 +11,8 @@ Los originales se conservan sin modificar. Antes de publicar, crear copias redac
 | fortigate/FW-05-politicas-seguridad.png | FortiGate | Políticas | Políticas | Demostrado |
 | usuarios/FW-06-grupos-usuarios.png | FortiGate | Grupos | Perfiles | Demostrado |
 | usuarios/FW-07-usuarios-locales.png | FortiGate | Usuarios | Perfiles | Demostrado |
-| usuarios/AD-01…04 | Active Directory | Grupos RA y miembros | Perfiles 
-| vpn/VPN-01-config-tunel-vpn-remote.png | FortiGate | Resumen del túnel | VPN 
+| usuarios/AD-01…04 | Active Directory | Grupos RA y miembros | Perfiles | Demostrado |
+| vpn/VPN-01-config-tunel-vpn-remote.png | FortiGate | Resumen del túnel | VPN | Demostrado |
 | vpn/VPN-02-forticlient-conectado.png | Cliente | VPN conectada | VPN | Demostrado |
 | vpn/VPN-03-monitor-ipsec.png | FortiGate | Monitor IPsec | VPN | Demostrado |
 | vpn/VPN-04-ip-cliente-vpn.png | Cliente | IP y adaptadores | VPN / DHCP | Demostrado |
@@ -24,6 +24,6 @@ Los originales se conservan sin modificar. Antes de publicar, crear copias redac
 | red/RED-06-usuario-webadmin.png | Web | Usuario `webadmin` | SSH | Demostrado |
 | jump-server/RDS-01…03 | Jump | RDS y colección | RemoteApp | Demostrado |
 | remoteapp/RDS-04…13 | Jump / RD Web | Asignaciones, login, iconos | RemoteApp 
-| pruebas-permitidas/TEST-01…08 | Varios | Pruebas exitosas | Pruebas 
+| pruebas-permitidas/TEST-01…08 | Varios | Pruebas exitosas | Pruebas | Demostrado |
 | pruebas-denegadas/TEST-10 | FortiGate | Deny SSH Jump | Restricciones | Demostrado |
 
