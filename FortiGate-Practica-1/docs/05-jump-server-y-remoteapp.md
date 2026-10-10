@@ -44,8 +44,6 @@ Cada aplicación está limitada a "Solo los usuarios y grupos especificados".
 | `usr_priv` | [RDS-08](../evidencias/remoteapp/RDS-08-rdweb-login-usr-priv.png) | [RDS-09](../evidencias/remoteapp/RDS-09-rdweb-tres-aplicaciones.png): mstsc, Firefox, PuTTY |
 | `usr_normal` | [RDS-10](../evidencias/remoteapp/RDS-10-rdweb-login-usr-normal.png) | [RDS-11](../evidencias/remoteapp/RDS-11-rdweb-solo-firefox-a.png) / [RDS-12](../evidencias/remoteapp/RDS-12-rdweb-solo-firefox-b.png): solo Firefox |
 
-**Límite de la evidencia.** Las pantallas de aplicaciones no muestran con qué usuario se inició sesión; la asociación usuario ↔ iconos se infiere de la secuencia de capturas. Estado: **Parcial**.
-
 **RemoteApp Web Client.** Lo mostrado es RD Web Access clásico (`/RDWeb/Pages/es-ES/`) de Windows Server 2019. Si la práctica exige el cliente web HTML5 (`/RDWeb/webclient`), no hay evidencia de él.
 
 ## Conexión a Escritorio remoto publicada
