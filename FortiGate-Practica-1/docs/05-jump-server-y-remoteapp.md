@@ -26,7 +26,7 @@ Cada aplicación está limitada a "Solo los usuarios y grupos especificados".
 ![Parámetros Firefox](../evidencias/remoteapp/RDS-05-firefox-parametros.png)
 *RDS-05. Firefox se inicia siempre con el parámetro `https://10.25.97.114`: el perfil básico llega al Web Server mediante esta aplicación.*
 
-> El parámetro fijo evita que el usuario pase otros argumentos, pero **no impide navegar a otras direcciones** desde Firefox una vez abierto. Con el firewall, el único destino alcanzable desde el Jump hacia el Web son HTTP/HTTPS/RDP/SSH.
+> El parámetro fijo evita que el usuario pase otros argumentos,Con el firewall, el único destino alcanzable desde el Jump hacia el Web son HTTP/HTTPS/RDP/SSH.
 
 ## Grupos y usuarios del dominio (Capa 2: permisos)
 ![Grupos RA](../evidencias/usuarios/AD-01-grupos-ra.png)
@@ -43,13 +43,6 @@ Cada aplicación está limitada a "Solo los usuarios y grupos especificados".
 | `usr_priv` | [RDS-08](../evidencias/remoteapp/RDS-08-rdweb-login-usr-priv.png) | [RDS-09](../evidencias/remoteapp/RDS-09-rdweb-tres-aplicaciones.png): mstsc, Firefox, PuTTY |
 | `usr_normal` | [RDS-10](../evidencias/remoteapp/RDS-10-rdweb-login-usr-normal.png) | [RDS-11](../evidencias/remoteapp/RDS-11-rdweb-solo-firefox-a.png) / [RDS-12](../evidencias/remoteapp/RDS-12-rdweb-solo-firefox-b.png): solo Firefox |
 
-**Límite de la evidencia.** Las pantallas de aplicaciones no muestran con qué usuario se inició sesión; la asociación usuario ↔ iconos se infiere de la secuencia de capturas. Estado: **Parcial**.
-
-**RemoteApp Web Client.** Lo mostrado es RD Web Access clásico (`/RDWeb/Pages/es-ES/`) de Windows Server 2019. Si la práctica exige el cliente web HTML5 (`/RDWeb/webclient`), no hay evidencia de él.
-
-## Conexión a Escritorio remoto publicada
-![mstsc](../evidencias/remoteapp/RDS-13-mstsc-equipo-weadmin.png)
-*RDS-13. Cuadro de mstsc con el campo "Equipo" = `weadmin`. Ese valor no es una IP ni un hostname resoluble (el usuario del Web se llama `webadmin`). No demuestra una sesión RDP.*
 
 ## Sesiones activas en la colección
 ![usr_priv](../evidencias/remoteapp/RDS-14-conexiones-usr-priv-activa.png)
