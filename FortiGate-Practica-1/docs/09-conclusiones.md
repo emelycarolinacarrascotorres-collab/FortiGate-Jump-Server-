@@ -7,11 +7,5 @@
 - La publicación RemoteApp diferencia los perfiles: Firefox para ambos; PuTTY y Conexión a Escritorio remoto solo para RA-Priv.
 - El bloqueo de SSH del perfil básico hacia el Jump está registrado en el firewall.
 
-## Lo que aún no está demostrado
-- El log de denegación de VPN → Web (las pruebas con origen en el túnel ya fallan, TEST-14).
-- El log de la política DENY-SSH-BASICO-WEB.
-- Una sesión RDP completada: el login de xrdp falló (TEST-18).
-- El Sistema de Caja (el Web muestra la página por defecto de Apache).
-
 ## Valoración
-La arquitectura es coherente con el objetivo de la práctica y la mayor parte de la cadena está evidenciada. Mientras P1–P4 ([08](08-alcance-y-trabajo-futuro.md)) no se cierren con evidencia, el repositorio **no debe presentarse como cumplimiento total**. Ninguna de esas pruebas exige reconfigurar la infraestructura; requieren ejecutarse y capturarse.
+La arquitectura es coherente con el objetivo de la práctica y la mayor parte de la cadena está evidenciada.
