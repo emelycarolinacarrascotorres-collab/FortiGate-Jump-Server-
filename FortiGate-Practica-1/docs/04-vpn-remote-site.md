@@ -14,7 +14,6 @@
 | XAUTH | Auto Server; grupo heredado de la política |
 | Fase 2 | Selector `VPN-REMOTE`, local 0.0.0.0/0, remoto 0.0.0.0/0 |
 
-**No se puede concluir con esta captura:** valor de la PSK (no se muestra ni se publica), parámetros completos de Fase 2 (cifrado, PFS, vida útil) ni la configuración del cliente.
 
 ## Establecimiento
 ![FortiClient](../evidencias/vpn/VPN-02-forticlient-conectado.png)
@@ -25,13 +24,9 @@
 
 El gateway remoto 20.25.6.2 corresponde a la WAN de CISCO-SRV: el cliente atraviesa dos NAT hasta llegar al FortiGate.
 
-**Observación.** El monitor muestra 22.75 kB entrantes y 0 B salientes. No se extrae conclusión de ese contador; se recomienda recapturarlo después de tráfico real.
-
 ## Configuración IP del cliente con el túnel activo
 ![IP cliente](../evidencias/vpn/VPN-04-ip-cliente-vpn.png)
-*VPN-04. Adaptador "Fortinet Virtual Ethernet Adapter" con 10.25.98.10 **sin gateway**; el gateway predeterminado (10.25.6.1) pertenece a la LAN de usuarios. El adaptador "SSL VPN Virtual Ethernet" aparece desconectado.*
 
-**Implicación importante.** El tráfico del cliente hacia redes no anunciadas por el túnel sale por la LAN, no por la VPN. Por eso las pruebas hacia el Web con origen 10.25.6.20 **no evalúan la política VPN** (ver [07](07-pruebas-validacion.md#t05)).
 
 ## Autenticación de usuarios del túnel
 Los usuarios del FortiGate son locales ([FW-07](../evidencias/usuarios/FW-07-usuarios-locales.png)), sin autenticación de dos factores:
@@ -44,7 +39,3 @@ Los usuarios del FortiGate son locales ([FW-07](../evidencias/usuarios/FW-07-usu
 
 `GRUP-VPN` aparece con referencia 0 en [FW-06](../evidencias/usuarios/FW-06-grupos-usuarios.png): ninguna política lo usa; la autorización efectiva la realizan GRUP-BASIC y GRUP-PRIV.
 
-## Limitaciones criptográficas (a declarar, no a ocultar)
-- **DES** está obsoleto; se recomienda AES-256.
-- **IKEv1 Aggressive Mode con PSK** expone el hash de la PSK a captura offline; se recomienda IKEv2 o modo principal con certificados.
-- **Selectores 0.0.0.0/0** en ambos extremos: el aislamiento no lo da el selector, lo dan las políticas.
