@@ -4,7 +4,6 @@
 ![Topología GNS3](../evidencias/red/RED-01-topologia-gns3.png)
 *RED-01. Topología en GNS3: ISP conectado a NAT1, a R1 (lado Cisco con switch y cliente Windows 10) y al FortiGate 7.0.9, del que cuelgan un Windows 10, un Windows Server 2019 y el Web Server.*
 
-Se puede verificar: nodos y enlaces. **No** se puede concluir solo con esta captura: direcciones, VLAN ni la función del Windows 10 conectado al FortiGate (probablemente gestión por el puerto MGMT; no hay evidencia, queda por confirmar).
 
 ## Diagrama lógico
 
