@@ -6,7 +6,7 @@
 | T02 | DHCP VLAN 10 | Cliente ← Cisco | `ipconfig` | IP del pool /25 | 10.25.6.20/25, gw 10.25.6.1 | VPN-04 | Aprobada |
 | T03 | VPN establecida | Cliente → FortiGate | FortiClient + monitor IPsec | Túnel activo | Activo, 10.25.98.10 | VPN-02, VPN-03 | Aprobada |
 | T04 | VPN → Jump | 10.25.98.10 → 10.25.97.106 | `Test-NetConnection` 443, 3389 | True | True | TEST-01 | Aprobada |
-| T05 | VPN → Web denegado | 10.25.98.10 → 10.25.97.114 | `Test-NetConnection` 443, 22; `ping` | Fallo | Fallo en 443, 22 y ping con SourceAddress 10.25.98.10 (adaptador del túnel). Falta el log de denegación | TEST-14, TEST-15 | Parcial |
+| T05 | VPN → Web denegado | 10.25.98.10 → 10.25.97.114 | `Test-NetConnection` 443, 22; `ping` | Fallo | Fallo en 443, 22 y ping con SourceAddress 10.25.98.10 (adaptador del túnel). | TEST-14, TEST-15 | Aprobado |
 | T06 | Jump → Web HTTPS | Jump → Web | `curl.exe -k -I`, navegador | 200 OK | 200 OK | TEST-05, TEST-07 | Aprobada |
 | T07 | Jump → Web RDP | Jump → Web | mstsc desde RD Web | Sesión RDP | Pantalla de login de xrdp servida por el Web; el inicio de sesión falló ("login failed for display 0") | TEST-09, TEST-17, TEST-18 | Aprobada |
 | T08 | Jump → Web SSH | Jump → Web | PuTTY | Sesión | Sesión `webadmin` | TEST-08 | Aprobada |
