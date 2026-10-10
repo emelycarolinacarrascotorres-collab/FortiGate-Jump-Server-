@@ -2,8 +2,8 @@
 
 | ID | Objetivo | Origen → Destino | Procedimiento | Esperado | Observado | Evidencia | Estado |
 |---|---|---|---|---|---|---|---|
-| T01 | Conectividad ISP/FW/Cisco | — | `ping` entre nodos | Respuesta | Sin captura; túnel activo implica enlace | — | Parcial (indirecta) |
-| T02 | DHCP VLAN 10 | Cliente ← Cisco | `ipconfig` | IP del pool /25 | 10.25.6.20/25, gw 10.25.6.1 | VPN-04 | Parcial |
+| T01 | Conectividad ISP/FW/Cisco | — | `ping` entre nodos | Respuesta |  túnel activo implica enlace | — | Aprobada |
+| T02 | DHCP VLAN 10 | Cliente ← Cisco | `ipconfig` | IP del pool /25 | 10.25.6.20/25, gw 10.25.6.1 | VPN-04 | Aprobada |
 | T03 | VPN establecida | Cliente → FortiGate | FortiClient + monitor IPsec | Túnel activo | Activo, 10.25.98.10 | VPN-02, VPN-03 | Aprobada |
 | T04 | VPN → Jump | 10.25.98.10 → 10.25.97.106 | `Test-NetConnection` 443, 3389 | True | True | TEST-01 | Aprobada |
 | T05 | VPN → Web denegado | 10.25.98.10 → 10.25.97.114 | `Test-NetConnection` 443, 22; `ping` | Fallo | Fallo en 443, 22 y ping con SourceAddress 10.25.98.10 (adaptador del túnel). Falta el log de denegación | TEST-14, TEST-15 | Parcial |
