@@ -23,7 +23,7 @@ Los originales se conservan sin modificar. Antes de publicar, crear copias redac
 | red/RED-05-xrdp-3389-web.png | Web | xrdp en 3389 | RDP | Demostrado |
 | red/RED-06-usuario-webadmin.png | Web | Usuario `webadmin` | SSH | Demostrado |
 | jump-server/RDS-01…03 | Jump | RDS y colección | RemoteApp | Demostrado |
-| remoteapp/RDS-04…13 | Jump / RD Web | Asignaciones, login, iconos | RemoteApp 
+| remoteapp/RDS-04…13 | Jump / RD Web | Asignaciones, login, iconos | RemoteApp | Demostrado | 
 | pruebas-permitidas/TEST-01…08 | Varios | Pruebas exitosas | Pruebas | Demostrado |
 | pruebas-denegadas/TEST-10 | FortiGate | Deny SSH Jump | Restricciones | Demostrado |
 
