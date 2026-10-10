@@ -1,4 +1,4 @@
-# 09 · Conclusiones
+# 08 · Conclusiones
 
 ## Resultados
 - La topología, el direccionamiento y las políticas del FortiGate están respaldados por capturas de la GUI.
