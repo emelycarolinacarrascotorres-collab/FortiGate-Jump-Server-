@@ -1,6 +1,6 @@
 # 07 · Pruebas y validación
 
-Estados: **Aprobada** (evidencia suficiente) · **Parcial** · **Ejecutada, no concluyente** (se hizo, pero no demuestra el requisito) · **Pendiente**. Tabla resumen: [`matrices/matriz-validacion.md`](../matrices/matriz-validacion.md).
+Estados: **Aprobada** (evidencia suficiente)
 
 ## Acceso VPN
 
