@@ -27,7 +27,6 @@ El mismo recuadro incluye una prueba al Web con origen 10.25.6.20, que **no** es
 *TEST-07. Firefox en el Jump con `https://10.25.97.114/` y la página "Apache2 Ubuntu Default Page".*
 
 `-k` omite la validación del certificado, que no se ha documentado (el navegador marca "No seguro").
-**Inconsistencia a aclarar:** el `curl` informa `Content-Length: 40` mientras que la página por defecto de Apache pesa alrededor de 10 KB. Puede ser un virtual host distinto entre HTTP y HTTPS o un archivo modificado. Ver T17.
 
 ### T07 · RDP: Parcial
 `TcpTestSucceeded: True` al puerto 3389 ([TEST-04](../evidencias/pruebas-permitidas/TEST-04-jump-a-web-tcp-443-22-3389.png)) y xrdp escuchando ([RED-05](../evidencias/red/RED-05-xrdp-3389-web.png)). **Falta una sesión RDP establecida** con 10.25.97.114 visible.
