@@ -37,7 +37,6 @@ Cada aplicación está limitada a "Solo los usuarios y grupos especificados".
 | RA-Priv | Alicia (cuenta de dominio) | [AD-03](../evidencias/usuarios/AD-03-miembros-ra-priv.png) |
 | RA-Normal | Emely (cuenta de dominio) | [AD-04](../evidencias/usuarios/AD-04-miembros-ra-normal.png) |
 
-**Pendiente de aclarar.** Las pantallas de RD Web usan los inicios de sesión `usr_priv` y `usr_normal`. Es razonable que correspondan a Alicia y Emely, pero ninguna captura muestra el "nombre de inicio de sesión" de esas cuentas. Hasta tenerla, la vinculación se marca como **no verificada**. Además, el FortiGate usa nombres distintos (Admin0697, Emely): son dos sistemas de identidad sin vínculo técnico entre sí.
 
 ## Acceso web (RD Web Access)
 | Usuario | Captura de inicio de sesión | Aplicaciones visibles |
