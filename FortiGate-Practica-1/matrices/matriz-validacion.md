@@ -1,0 +1,25 @@
+# Matriz de validación
+
+| ID | Objetivo | Origen → Destino | Procedimiento | Esperado | Observado | Evidencia | Estado |
+|---|---|---|---|---|---|---|---|
+| T01 | Conectividad ISP/FW/Cisco | — | `ping` entre nodos | Respuesta | Sin captura; túnel activo implica enlace | — | Parcial (indirecta) |
+| T02 | DHCP VLAN 10 | Cliente ← Cisco | `ipconfig` | IP del pool /25 | 10.25.6.20/25, gw 10.25.6.1 | VPN-04 | Parcial |
+| T03 | VPN establecida | Cliente → FortiGate | FortiClient + monitor IPsec | Túnel activo | Activo, 10.25.98.10 | VPN-02, VPN-03 | Aprobada |
+| T04 | VPN → Jump | 10.25.98.10 → 10.25.97.106 | `Test-NetConnection` 443, 3389 | True | True | TEST-01 | Aprobada |
+| T05 | VPN → Web denegado | 10.25.98.10 → 10.25.97.114 | `Test-NetConnection`, `ping` | Fallo | Sin prueba válida | TEST-12/13 | **Pendiente** |
+| T06 | Jump → Web HTTPS | Jump → Web | `curl.exe -k -I`, navegador | 200 OK | 200 OK | TEST-05, TEST-07 | Aprobada |
+| T07 | Jump → Web RDP | Jump → Web | TCP 3389 + sesión | Sesión RDP | Solo TCP/servicio | TEST-04, RED-05 | Parcial |
+| T08 | Jump → Web SSH | Jump → Web | PuTTY | Sesión | Sesión `webadmin` | TEST-08 | Aprobada |
+| T09 | Acceso RemoteApp | Cliente → RD Web | Navegador | Login y aplicaciones | Login y aplicaciones | RDS-08–RDS-12 | Aprobada |
+| T10 | RemoteApp Web Client | Cliente → RD Web | `/RDWeb/webclient` | Cliente HTML5 | RD Web Access clásico | RDS-08 | Parcial |
+| T11 | Básico: solo Firefox | `usr_normal` | RD Web | 1 icono | 1 icono (usuario no visible) | RDS-11/12 | Parcial |
+| T12 | Privilegiado: 3 apps | `usr_priv` | RD Web | 3 iconos | 3 iconos (usuario no visible) | RDS-09 | Parcial |
+| T13 | Básico SSH → Jump | Emely → 10.25.97.106 | Log del FortiGate | Deny | Deny: policy violation | TEST-10 | Aprobada |
+| T14 | Básico SSH → Web | Emely → 10.25.97.114 | Log del FortiGate | Deny | 0 B, sin intento | FW-05 | **Pendiente** |
+| T15 | Puerto no autorizado Jump → Web | Jump → Web:445 | `Test-NetConnection` | Fallo con log | Fallo, sin log; puerto cerrado en el Web | TEST-11 | No concluyente |
+| T16 | Cliente LAN → Web | 10.25.6.20 → Web | `Test-NetConnection`, `ping` | Fallo | Fallo, pero no pasa por la VPN | TEST-12/13 | No concluyente |
+| T17 | Sistema de Caja | Jump → Web | Navegador | Aplicación de caja | Página Apache por defecto | TEST-06, TEST-07 | **Pendiente** |
+| T18 | Básico RDP directo al Jump | Emely → Jump:3389 | `mstsc` | A definir | Sin prueba | — | **Pendiente** |
+| T19 | Usuarios → redes no autorizadas | Varios | Pruebas dirigidas | Denegado | Sin prueba | — | **Pendiente** |
+
+**Totales:** 6 Aprobadas · 6 Parciales · 2 No concluyentes · 5 Pendientes (T05, T14, T17, T18, T19).
