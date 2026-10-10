@@ -4,7 +4,7 @@
 ![Rol RDS](../evidencias/jump-server/RDS-01-rol-rds.png)
 *RDS-01. Rol "Servicios de Escritorio remoto" presente en el Administrador del servidor.*
 
-El Administrador del servidor del Jump muestra además AD DS, DNS, IIS y Servicios de archivos ([TEST-11](../evidencias/pruebas-denegadas/TEST-11-jump-a-web-445-no-concluyente.png)). Su DNS es 127.0.0.1, por lo que el Jump es también **controlador de dominio** (`redlocal.com`). Es una limitación de diseño; ver [08](08-limitaciones-y-pendientes.md).
+El Administrador del servidor del Jump muestra además AD DS, DNS, IIS y Servicios de archivos ([TEST-11](../evidencias/pruebas-denegadas/TEST-11-jump-a-web-445-no-concluyente.png)). Su DNS es 127.0.0.1, por lo que el Jump es también **controlador de dominio** (`redlocal.com`)
 
 ## Colección COL-JUMP
 ![Colección](../evidencias/jump-server/RDS-02-coleccion-col-jump.png)
