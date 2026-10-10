@@ -27,8 +27,7 @@ Laboratorio de segmentación de red y acceso remoto controlado: un FortiGate pro
 5. [Funcionalidades verificadas](#funcionalidades-verificadas)
 6. [Pruebas y estado de cumplimiento](#pruebas-y-estado-de-cumplimiento)
 7. [Documentación y archivos](#documentación-y-archivos)
-8. [Alcance y trabajo futuro](#alcance-y-trabajo-futuro)
-9. [Conclusiones](#conclusiones)
+8. [Conclusiones](#conclusiones)
 
 ---
 
