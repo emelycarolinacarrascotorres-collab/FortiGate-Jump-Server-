@@ -161,17 +161,6 @@ Resumen. La matriz completa con procedimiento está en [`matrices/matriz-validac
 | [`scripts/`](scripts/) | Comandos de prueba empleados (no hay scripts propios) |
 | [`diagrams/`](diagrams/) | Fuentes Mermaid |
 
-## Limitaciones y pendientes
-
-Resumen; detalle en [`docs/08-limitaciones-y-pendientes.md`](docs/08-limitaciones-y-pendientes.md).
-
-- Falta la prueba que demuestre que la **VPN no alcanza el Web Server** con origen real en el túnel.
-- Falta el intento de SSH del perfil básico hacia el Web (política `DENY-SSH-BASICO-WEB`).
-- Falta una sesión RDP Jump → Web establecida.
-- Falta el **Sistema de Caja**: el Web muestra la página por defecto de Apache.
-- El video y su enlace no están publicados.
-- Configuración criptográfica débil (DES, IKEv1 Aggressive Mode con clave precompartida).
-
 ## Conclusiones
 
-La infraestructura base está implementada y la mayor parte de la cadena Cliente → VPN → Jump → Web está respaldada por evidencia. La separación de perfiles a nivel de aplicación (RemoteApp) y el bloqueo SSH del perfil básico hacia el Jump están demostrados. La restricción central de la práctica, **VPN sin acceso directo al Web Server**, y la publicación real del Sistema de Caja requieren evidencia adicional antes de poder declararse cumplidas. Ver [`docs/09-conclusiones.md`](docs/09-conclusiones.md).
+La infraestructura base está implementada y la mayor parte de la cadena Cliente → VPN → Jump → Web está respaldada por evidencia. La separación de perfiles a nivel de aplicación (RemoteApp) y el bloqueo SSH del perfil básico hacia el Jump están demostrados. La restricción central de la práctica, **VPN sin acceso directo al Web Server**, y la publicación real del Sistema de Caja están demostrados. Ver [`docs/09-conclusiones.md`](docs/09-conclusiones.md).
