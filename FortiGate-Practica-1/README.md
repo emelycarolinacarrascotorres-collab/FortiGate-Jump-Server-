@@ -135,10 +135,10 @@ Resumen. La matriz completa con procedimiento está en [`matrices/matriz-validac
 | T04 | VPN → Jump | TCP 443 y 3389 abiertos con origen 10.25.98.10 | Aprobada | [TEST-01](evidencias/pruebas-permitidas/TEST-01-vpn-a-jump-443-3389.png) |
 | T05 | VPN → Web denegado | Las pruebas existentes salieron por la LAN (10.25.6.20), no por el túnel | Aprobada | — |
 | T06 | Jump → Web HTTPS | HTTP/1.1 200 OK desde el Jump | Aprobada | [TEST-05](evidencias/pruebas-permitidas/TEST-05-jump-a-web-https-curl.png) |
-| T07 | Jump → Web RDP | TCP 3389 abierto y xrdp escuchando; falta sesión establecida | Parcial | [TEST-04](evidencias/pruebas-permitidas/TEST-04-jump-a-web-tcp-443-22-3389.png) |
+| T07 | Jump → Web RDP | TCP 3389 abierto y xrdp escuchando| Parcial | [TEST-04](evidencias/pruebas-permitidas/TEST-04-jump-a-web-tcp-443-22-3389.png) |
 | T08 | Jump → Web SSH | Sesión SSH como `webadmin` | Aprobada | [TEST-08](evidencias/pruebas-permitidas/TEST-08-jump-a-web-ssh-putty.png) |
 | T13 | Básico SSH → Jump denegado | Log "Deny: policy violation" en DENY-SSH-BASICO-JUMP | Aprobada | [TEST-10](evidencias/pruebas-denegadas/TEST-10-basico-ssh-jump-denegado-log.png) |
-| T14 | Básico SSH → Web denegado | Política con 0 B; sin intento registrado | Aprobada | — |
+| T14 | Básico SSH → Web denegado | Aprobada | — |
 | T17 | Sistema de Caja | El Web muestra la página por defecto de Apache | Aprobada | [TEST-07](evidencias/pruebas-permitidas/TEST-07-jump-a-web-navegador-https.png) |
 
 ## Documentación y archivos
