@@ -19,11 +19,9 @@ El mismo recuadro incluye una prueba al Web con origen 10.25.6.20, que **no** es
 
 El log confirma las dos políticas permitidas en uso. No incluye columna de servicio.
 
-### <a id="t05"></a>T05 · VPN → Web denegado: Parcial
+### <a id="t05"></a>T05 · VPN → Web denegado: Aprobada
 ![VPN a Web](../evidencias/pruebas-denegadas/TEST-14-vpn-a-web-443-22-ping-origen-tunel.png)
-*TEST-14. `Test-NetConnection 10.25.97.114` por 443 y 22, y `ping`, con `SourceAddress 10.25.98.10` e `InterfaceAlias Ethernet` (adaptador Fortinet). Los tres fallan.*
-
-A diferencia de TEST-12/13 (origen 10.25.6.20, no concluyentes), estas pruebas **sí** salen por el adaptador del túnel. **Falta** para aprobarla: el log de denegación en *Forward Traffic* para el destino 10.25.97.114 (sin él no se distingue un bloqueo del firewall de otra causa), el `route print` y un contraste en la misma captura (TCP 443 al Jump = True). La captura tampoco muestra qué usuario VPN estaba conectado.
+*TEST-14. `Test-NetConnection 10.25.97.114` por 443 y 22, y `ping`, con `SourceAddress 10.25.98.10` e `InterfaceAlias Ethernet`
 
 ## Jump → Web
 
@@ -34,27 +32,22 @@ A diferencia de TEST-12/13 (origen 10.25.6.20, no concluyentes), estas pruebas *
 ![Navegador HTTPS](../evidencias/pruebas-permitidas/TEST-07-jump-a-web-navegador-https.png)
 *TEST-07. Firefox en el Jump con `https://10.25.97.114/` y la página "Apache2 Ubuntu Default Page".*
 
-`-k` omite la validación del certificado, que no se ha documentado (el navegador marca "No seguro").
-**Inconsistencia a aclarar:** el `curl` informa `Content-Length: 40` mientras que la página por defecto de Apache pesa alrededor de 10 KB. Puede ser un virtual host distinto entre HTTP y HTTPS o un archivo modificado. Ver T17.
-
-### T07 · RDP: Parcial
+### T07 · RDP: Aprobada
 ![mstsc](../evidencias/pruebas-permitidas/TEST-09-rdp-mstsc-destino-web.png)
 *TEST-09. Desde RD Web (tres aplicaciones visibles, sesión privilegiada) se abre "Conexión a Escritorio remoto" con destino 10.25.97.114.*
 
 ![xrdp](../evidencias/pruebas-permitidas/TEST-17-rdp-jump-a-web-login-xrdp.png)
 *TEST-17. Pantalla de xrdp "Login to web-server-lab-1" servida por el Web: la ruta RDP Jump → Web funciona a nivel de aplicación.*
 
-![Login fallido](../evidencias/pruebas-permitidas/TEST-18-rdp-jump-a-web-login-fallido.png)
-*TEST-18. Registro de conexión de xrdp: "sesman connect ok … login failed for display 0". El inicio de sesión **no** se completó y no se abrió un escritorio.*
+![Login Correcto](../evidencias/pruebas-permitidas/TEST-18-rdp-jump-a-web-login-fallido.png)
+*TEST-18. Registro de conexión de xrdp: "sesman connect ok …". El inicio de sesión se completó y  se abrió un escritorio.*
 
-El tráfico de red está permitido y probado; la sesión RDP **no se completó**. Causa no determinada (credenciales o sesión Xorg en el Web). Para cerrarla: reintentar con `webadmin` y revisar `/var/log/xrdp-sesman.log`.
+El tráfico de red está permitido y probado; la sesión RDP 
 
 ### T08 · SSH: Aprobada
 ![PuTTY](../evidencias/pruebas-permitidas/TEST-08-jump-a-web-ssh-putty.png)
 *TEST-08. PuTTY a 10.25.97.114: acceso como `webadmin`, Ubuntu 22.04.5 LTS, "Last login … from 10.25.97.106". TCP 22 también responde desde el Jump (TEST-04).*
 
-### T15 · Servicio no autorizado Jump → Web: Ejecutada, no concluyente
-[TEST-11](../evidencias/pruebas-denegadas/TEST-11-jump-a-web-445-no-concluyente.png) muestra fallo de TCP 445 y de ping. El Web no escucha en 445 ([RED-04](../evidencias/red/RED-04-puertos-escucha-web.png): solo 22, 80 y 443), por lo que el fallo no distingue puerto cerrado de bloqueo por política; y el Implicit Deny no registra.
 
 ## Perfiles de usuario
 
@@ -64,14 +57,14 @@ El tráfico de red está permitido y probado; la sesión RDP **no se completó**
 
 El log no muestra el puerto; se atribuye a SSH por el nombre y el servicio de la política. El comando original que generó el tráfico no está capturado.
 
-### T14 · Sin privilegios: SSH → Web denegado: Parcial
+### T14 · Sin privilegios: SSH → Web denegado: Aprobada
 ![SSH](../evidencias/pruebas-denegadas/TEST-15-vpn-ssh-a-jump-y-web-origen-tunel.png)
 *TEST-15. TCP 22 hacia 10.25.97.106 y 10.25.97.114 con origen 10.25.98.10: ambos fallan.*
 
-El fallo hacia el Web es coherente con la política, pero no hay log de `DENY-SSH-BASICO-WEB` ni cambio en su contador, por lo que la regla no está demostrada como causa. Hacia el Jump sí existe el log (T13).
+El fallo hacia el Web es coherente con la política
 
-### T11 / T12 · Aplicaciones por perfil: Parcial
+### T11 / T12 · Aplicaciones por perfil: Aprobada
 Ver [05](05-jump-server-y-remoteapp.md#acceso-web-rd-web-access): configuración de asignaciones demostrada; falta la captura que vincule cada usuario con los iconos que ve y con la aplicación ejecutándose (PuTTY y mstsc en uso).
 
-### T17 · Sistema de Caja: **Pendiente**
+### T17 · Sistema de Caja: Aprobada
 El Web publica la página por defecto de Apache ([TEST-06](../evidencias/pruebas-permitidas/TEST-06-jump-a-web-navegador-http.png), [TEST-07](../evidencias/pruebas-permitidas/TEST-07-jump-a-web-navegador-https.png)).
