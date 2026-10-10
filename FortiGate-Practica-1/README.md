@@ -124,7 +124,6 @@ Solo se listan las que aparecen en las evidencias.
 | Jump → Web por HTTPS | Demostrado | [TEST-05](evidencias/pruebas-permitidas/TEST-05-jump-a-web-https-curl.png) |
 | SSH denegado al Jump para el perfil básico | Demostrado | [TEST-10](evidencias/pruebas-denegadas/TEST-10-basico-ssh-jump-denegado-log.png) |
 | RemoteApp diferenciado por grupo | Parcialmente demostrado | [RDS-04](evidencias/remoteapp/RDS-04-firefox-asignacion.png), [RDS-09](evidencias/remoteapp/RDS-09-rdweb-tres-aplicaciones.png) |
-| **VPN bloqueada hacia el Web Server** | **Pendiente de prueba válida** | Ver [limitaciones](docs/08-limitaciones-y-pendientes.md) |
 
 ## Pruebas y estado de cumplimiento
 
